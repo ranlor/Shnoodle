@@ -1,0 +1,342 @@
+/*** media poster section ***/
+
+.present-poster-view
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 10px;
+}
+
+.poster-show-view,
+.poster-view
+{
+    position: relative;
+    display: inline-block;
+    background-color: #111;
+    background-repeat: no-repeat;
+    width: 33vw;
+    background-size: contain;
+    height: 320px;
+    background-position: center center;
+    overflow: hidden;
+    border-radius: 5px;
+    filter: saturate(0);
+    transition: filter 1s ease-in-out;
+}
+
+
+.poster-show-view > .poster-img-con,
+.poster-view > .poster-img-con
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.poster-show-view .poster-img,
+.poster-view .poster-img
+{
+    z-index:1;
+    position:relative;
+    flex:1;
+    overflow: hidden;
+    
+}
+
+.poster-view .poster-img
+{
+    transform: skew(calc(var(--skewDeg) * -1)) scale(1.3);
+    transition: flex-grow 1s ease-in-out;
+}
+
+
+.poster-show-view .poster-img
+{
+    transform: scale(1);
+}
+
+.poster-view .poster-img:hover
+{
+    flex-grow:7;
+}
+
+.poster-view .poster-img img
+{
+    /* all animations here need to add skew with the opposite deg of the parent (as add it in js)*/
+    opacity: 0;
+    width: auto;
+    height: 120%;
+    transform: skew(var(--skewDeg)); /*counter act parent*/
+    transition: all 1s ease-in-out;
+}
+
+.poster-pan
+{
+    animation: fade-in 0.5s forwards, poster-play 40s infinite;
+}
+
+.poster-scan
+{
+    animation: fade-in 0.5s forwards, poster-up-down 60s infinite;
+}
+
+.poster-tri
+{
+    animation: fade-in 0.5s forwards, poster-tri 30s infinite;
+}
+
+.show-poster-animation-scale
+{
+    animation: fade-in 0.5s forwards, scale-loop 40s infinite;
+}
+
+.show-poster-animation-pan
+{
+    animation: fade-in 0.5s forwards, pan-loop 45s infinite;
+}
+
+.show-poster-animation-rotate
+{
+    animation: fade-in 0.5s forwards, rotate-loop 50s infinite;
+}
+
+.reverse-animation
+{
+    animation-direction: normal, reverse;
+}
+
+.normal-animation
+{
+    animation-direction: normal, normal;
+}
+
+.poster-view .poster-img img:hover
+{
+    /* animation-play-state: running, paused; */
+    animation: fade-in 0.5s forwards, poster-hover 15s infinite;
+}
+
+.poster-show-view .poster-img img:hover
+{
+    opacity: 1;
+    animation-play-state: paused;
+}
+
+.poster-show-view > h3,
+.poster-view > h3
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 2%;
+    margin: 0;
+    font-family: web-font-ui;
+    font-size: 25pt;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    width: 96%;
+    height: 50%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.poster-show-view > .poster-metabox,
+.poster-view > .poster-metabox
+{
+    padding: 5px;
+    border: 1px solid var(--text-color);
+    display: inline;
+    border-radius: 3px;
+    font-size: 11pt;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--text-color);
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background-color: var(--gradient-clr2-50);
+    margin:2%;
+    z-index: 11;
+    pointer-events: none;
+    backdrop-filter: blur(15px);
+}
+
+.poster-show-view > .poster-metabox-movie,
+.poster-view > .poster-metabox-movie
+{
+    background-color: var(--gradient-clr3-50);
+}
+
+.poster-show-view > .poster-metabox-show,
+.poster-view >  .poster-metabox-show
+{
+    background-color: var(--gradient-clr1-50);
+}
+
+.poster-show-view > .poster-metabox-clip,
+.poster-view >  .poster-metabox-clip
+{
+    background-color: var(--gradient-clr2-50);
+}
+
+.in-view
+{
+    filter: saturate(1);
+}
+
+.episode-container 
+{
+    display: block;
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    border: 1px solid var(--text-color);
+    width: 50vw;
+    height: 70vh;
+    z-index:3;
+
+}
+
+.episode-backdrop-image
+{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(1px);
+}
+
+.episode-container  .close-button
+{
+    display: block;
+    margin: 20px auto;
+    padding:10px;
+    border: 0;
+    background-color: transparent;
+    background-image: url("/res/closeButton.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -999px;
+    height:10%;
+    width:50px;
+}
+
+.episode-list-container
+{
+    text-align: center;
+    font-size: 16pt;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    height: 70%;
+    display: flex;
+}
+
+
+.episode-list-container .episode-list,
+.episode-list-container .season-list
+{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+}
+
+.episode-list-container .season-list
+{
+    margin:auto;
+}
+
+.episode-list-container  .season-list-item summary,
+.episode-list-container  .episode-list-item
+{
+    padding: 10px 0;
+    border-bottom: 1px solid #fff2;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'web-font-fs';
+    display: flex;
+}
+
+.episode-list-container  .season-list-item .ep-sec-detail
+{
+    order:1;
+    font-family: 'web-font-ui-thin';
+    min-width: 100px;
+}
+
+.episode-list-container  .season-list-item .ep-sec-name
+{
+    order: 2;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.episode-list-container  .season-list-item summary
+{
+    font-family: 'web-font-title';
+    display: block;
+}
+
+.episode-list-container  .season-list-item details
+{
+    overflow: hidden;
+}
+
+.episode-list-container  .season-list-item summary
+{
+    list-style: none;
+    box-shadow: 0 12px 59px black;
+}
+
+.episode-list-container  .season-list-item summary:hover,
+.episode-list-container  .episode-list-item:hover
+{
+    background: linear-gradient(90deg, #0000 0%, var(--gradient-clr1-25) 10%, var(--gradient-clr2-25) 90%, #0000 100%);
+    transition: background-color 0.2s ease-in;
+}
+
+.episode-list-container  .season-list-item summary:hover
+{
+    background: linear-gradient(90deg, #0000 0%, var(--gradient-clr3-25) 10%, var(--gradient-clr4-25) 90%, #0000 100%);
+}
+
+.float-module
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.hide-module
+{
+    display: none !important;
+}
+
+.episode-container-backdrop
+{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: saturate(0);
+    transition: all 0.5s;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.poster-show-view > .loading-screen,
+.poster-view > .loading-screen
+{
+    background-color: #111;
+    z-index: 9;
+}

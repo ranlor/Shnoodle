@@ -1,0 +1,93 @@
+<svg viewBox="0 0 1024 3" width="1024px" height="20px" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+
+        <linearGradient id="gradient_forward" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="100%" y2="0" spreadMethod="pad">
+            <stop stop-color="#f6676d" offset="0.0105263157894737" stop-opacity="1"/>
+            <stop stop-color="#f68958" offset="0.0526315789473684" stop-opacity="1"/>
+            <stop stop-color="#9f46c4" offset="0.452631578947368" stop-opacity="1"/>
+            <stop stop-color="#59f0eb" offset="0.763157894736842" stop-opacity="1"/>
+        </linearGradient>
+
+        <linearGradient id="gradient_rev" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="100%" y2="0" spreadMethod="pad">
+            <stop stop-color="#59f0eb" offset="0.0105263157894737" stop-opacity="1"/>
+            <stop stop-color="#9f46c4" offset="0.0526315789473684" stop-opacity="1"/>
+            <stop stop-color="#f68958" offset="0.452631578947368" stop-opacity="1"/>
+            <stop stop-color="#f6676d" offset="0.763157894736842" stop-opacity="1"/>
+        </linearGradient>
+
+         <linearGradient id="gradient_rev_span" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="100%" y2="0" spreadMethod="pad" >
+            <stop stop-color="#59f0eb" offset="0.01" stop-opacity="1"/>
+            <stop stop-color="#9f46c4" offset="0.50" stop-opacity="1"/>
+            <stop stop-color="#f68958" offset="0.85" stop-opacity="1"/>
+            <stop stop-color="#f6676d" offset="0.99" stop-opacity="1"/>
+        </linearGradient>
+
+    </defs>
+    <rect x="0" y="2" width="512" height="1" stroke="none" fill="url(#gradient_forward)" stroke-width="0" />
+    <rect x="512" y="2" width="512" height="1" stroke="none" fill="url(#gradient_rev)" stroke-width="0" />
+    <g transform="scale(3.0)">
+        <path d="M0.89 3.45 L0.89 3.45 Q0.00 3.00, 0.89 2.55 L5.11 0.45 Q6.00 0.00, 6.00 1.00 L6.00 5.00 Q6.00 6.00, 5.11 5.55 Z" fill="url(#gradient_rev_span)" fill-opacity="0">
+            <animateTransform
+                    id="mov1"
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="translate"
+                    from="0 -2"
+                    to="-10 -2"
+                    dur="1s"
+                    repeatCount="1"
+                    begin="2s;mov1.end + 2s"
+                />
+            <animate
+                id="op1"
+                attributeName="fill-opacity"
+                values="0;1;1;0.5;0"
+                keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1 "
+                dur="1s"
+                repeatCount="1"
+                begin="2s;op1.end + 2s"/>
+        </path>
+        <path d="M0.89 3.45 L0.89 3.45 Q0.00 3.00, 0.89 2.55 L5.11 0.45 Q6.00 0.00, 6.00 1.00 L6.00 5.00 Q6.00 6.00, 5.11 5.55 Z" fill="url(#gradient_rev_span)" fill-opacity="0" >
+            <animateTransform
+                    id="mov1"
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="translate"
+                    from="170 -2"
+                    to="160 -2"
+                    dur="1s"
+                    repeatCount="1"
+                    begin="3s;mov1.end + 3s"
+                />
+            <animate
+                id="op1"
+                attributeName="fill-opacity"
+                values="0;1;1;0.5;0"
+                keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1 "
+                dur="1s"
+                repeatCount="1"
+                begin="3s;op1.end + 3s" />
+        </path>
+        <path d="M0.89 3.45 L0.89 3.45 Q0.00 3.00, 0.89 2.55 L5.11 0.45 Q6.00 0.00, 6.00 1.00 L6.00 5.00 Q6.00 6.00, 5.11 5.55 Z" fill="url(#gradient_rev_span)" fill-opacity="0" >
+            <animateTransform
+                    id="mov1"
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="translate"
+                    from="341 -2"
+                    to="331 -2"
+                    dur="1s"
+                    repeatCount="1"
+                    begin="2s;mov1.end + 2s"
+                />
+            <animate
+                id="op1"
+                attributeName="fill-opacity"
+                values="0;1;1;0.5;0"
+                keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1 "
+                dur="1s"
+                repeatCount="1"
+                begin="2s;op1.end + 2s" />
+        </path>
+    </g>
+</svg>

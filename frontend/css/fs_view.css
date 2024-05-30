@@ -1,0 +1,107 @@
+/*** media file section ***/
+
+.present-fs-view
+{
+    font-family: 'web-font-fs';
+    font-size: 14pt;
+}
+
+.file-view:hover,
+.dir-view > summary:hover
+{
+    background-color: rgba(255,255,255,0.2);
+}
+
+.file-view
+{
+    padding: 10px;
+    padding-left: 42px;
+    background-image: url('/res/filmIconPlay.svg');
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+.toolbar .sort-ab,
+.dir-view > summary .name,
+.file-view .name
+{
+    flex:1 1 0;
+}
+
+.toolbar .sort-sz,
+.dir-view > summary .size,
+.file-view .size
+{
+    margin-right: 30px;
+}
+
+.toolbar .sort-md,
+.dir-view > summary .mod,
+.file-view .mod
+{
+    min-width: 200px;
+    text-align: center;
+    display: inline-block;
+}
+
+.file-view,
+.dir-view
+{
+    margin-left: 20px;
+}
+
+.dir-view[open] > summary,
+.dir-view > summary
+{
+    list-style-type: none;
+    padding: 10px;
+    padding-left: 42px;
+    background-image: url('/res/folderClosed.svg');
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+.toolbar,
+.file-view,
+.dir-view > summary
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.dir-view[open] > summary
+{
+    background-image: url('/res/folderOpen.svg');
+}
+
+.sort-button
+{
+    text-align: center;
+    border-bottom: var(--gradient-clr1) 1px solid;
+    text-transform: uppercase;
+}
+
+.sort-button:hover
+{
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.toolbar
+{
+    margin-bottom: 20px;
+}
+
+.toolbar .sort-sz
+{
+    width:120px;
+    padding-right: 30px;
+    margin: 0;
+}
+
+.toolbar .sort-ab
+{
+    text-align: left;
+    padding-left:20px;
+}

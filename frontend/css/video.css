@@ -1,0 +1,183 @@
+
+
+#videoPlayer
+{
+    width: 80%;
+    margin: 2% auto;
+    display: block;
+    background: transparent url('/res/logo.svg') 50% 50% / contain no-repeat ;
+}
+
+#videoPlayer:fullscreen
+{
+    background: #000;
+}
+
+
+
+.wrapper
+{
+    position: relative;
+}
+
+.wrapper:hover > .videoTitle
+{
+    opacity: 0;
+}
+
+.videoTitle
+{
+    font-size: 20pt;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5%;
+    padding-bottom: 10%;
+    letter-spacing: 0.2em;
+    position: absolute;
+    top: 0;
+    width: 80%;
+    left: 10%;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none;
+    transition: all 1s ease-in-out;
+}
+
+.extenderContainer
+{
+    width: 20px;
+    overflow: hidden;
+    padding: 5px;
+    margin: 1%;
+    height: 20px;
+    position: absolute;
+    top: 1%;
+    left: 0;
+    background-color: var(--bg-color);
+    transition: all 1s ease-out;
+}
+
+.clipboard
+{
+    background: url("/res/clipboard.svg") no-repeat left top;
+}
+
+.extenderContainer:hover
+{
+    width: 100%;
+}
+
+.extenderContainer > div
+{
+    width: 860px;
+    padding-left: 25px;
+}
+
+/** next episode module pop up **/
+
+.next-episode-module
+{
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 30px;
+    border: solid 1px var(--gradient-clr2);
+    border-radius: 15px;
+}
+
+.next-episode-module::backdrop
+{
+    background-image: linear-gradient(
+        45deg,
+        var(--gradient-clr1),
+        var(--gradient-clr2),
+        var(--gradient-clr3),
+        var(--gradient-clr4)
+    );
+    opacity: 0.50;
+}
+
+.next-episode-text,
+.next-episode-countdown
+{
+    padding:10px;
+}
+
+.next-episode-btn
+{
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 10px;
+    font-family: 'web-font-ui';
+    text-transform: uppercase;
+    margin: 5px;
+    color: var(--text-color);
+    margin-top: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-out;
+}
+
+.next-episode-btn:hover
+{
+    border: 1px solid var(--text-color);
+}
+
+.next-episode-btn-cancel
+{
+    background-color: var(--gradient-clr2-50);
+    float:left;
+}
+
+.next-episode-btn-go
+{
+    background-color: var(--gradient-clr4-75);
+    padding: 5px 35px;
+    float:right;
+}
+
+.next-episode-btn-go:after
+{
+    clear:both;
+}
+
+.countdown-con
+{
+    margin: 20px 2px;
+    background-color: rgba(0,0,0,0.5);
+    height: 30px;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.countdown-progress-bar
+{
+    width:100%;
+    height:100%;
+    background-color: var(--bg-color);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.countdown-backdrop
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0);
+}
+
+.countdown-backdrop::before
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+    var(--gradient-clr1) 0%,
+    var(--gradient-clr2) 30%,
+    var(--gradient-clr3) 75%,
+    var(--gradient-clr4) 95%,
+    var(--gradient-clr4) 100% );
+}

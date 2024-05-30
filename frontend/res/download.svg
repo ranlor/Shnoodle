@@ -1,0 +1,15 @@
+<svg id="filmIcon" viewBox="0 0 100 100" width="64px" height="64px" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient0" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1.4142135623731" y2="0" spreadMethod="pad" gradientTransform="rotate(45)">
+            <stop stop-color="#f6676d" offset="0.0105263157894737" stop-opacity="1"/>
+            <stop stop-color="#f68958" offset="0.0526315789473684" stop-opacity="1"/>
+            <stop stop-color="#9f46c4" offset="0.452631578947368" stop-opacity="1"/>
+            <stop stop-color="#59f0eb" offset="0.763157894736842" stop-opacity="1"/>
+        </linearGradient>
+    </defs>
+
+    <g>
+        <path d="M40.00 12.00 L40.00 12.00 Q40.00 10.00, 42.00 10.00 L58.00 10.00 Q60.00 10.00, 60.00 12.00 L60.00 48.00 Q60.00 50.00, 62.00 50.00 L78.00 50.00 Q80.00 50.00, 78.59 51.41 L51.41 78.59 Q50.00 80.00, 48.59 78.59 L21.41 51.41 Q20.00 50.00, 22.00 50.00 L38.00 50.00 Q40.00 50.00, 40.00 48.00 Z" fill="url(#gradient0)"/>
+        <path d="M10.00 92.00 L10.00 92.00 Q10.00 90.00, 12.00 90.00 L88.00 90.00 Q90.00 90.00, 90.00 92.00 L90.00 93.00 Q90.00 95.00, 88.00 95.00 L12.00 95.00 Q10.00 95.00, 10.00 93.00 Z" fill="url(#gradient0)"/>
+    </g>
+</svg>

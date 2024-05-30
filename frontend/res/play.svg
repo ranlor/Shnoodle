@@ -1,0 +1,34 @@
+<svg viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+
+        <linearGradient id="gradient0" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1.4142135623731" y2="0" spreadMethod="pad">
+            <stop stop-color="#f6676d" offset="0.0105263157894737" stop-opacity="1"/>
+            <stop stop-color="#f68958" offset="0.0526315789473684" stop-opacity="1"/>
+            <stop stop-color="#9f46c4" offset="0.452631578947368" stop-opacity="1"/>
+            <stop stop-color="#59f0eb" offset="0.763157894736842" stop-opacity="1"/>
+        </linearGradient>
+
+        <mask id="maskGradient" mask-mode="alpha">
+            <!-- <path id="playButton" d="M 0 0 L 0 50 L 50 25 Z" fill="white"> -->
+            <path id="playButton" d="M6.26 3.13 L6.26 3.13 Q0.00 0.00, 0.00 7.00 L0.00 43.00 Q0.00 50.00, 6.26 46.87 L43.74 28.13 Q50.00 25.00, 43.74 21.87 Z" fill="white">
+                <animateTransform
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="translate"
+                    from="0 0"
+                    to="100 0"
+                    dur="2s"
+                    repeatCount="indefinite"
+                />
+                <animate
+                    attributeName="fill-opacity"
+                    values="0;1;1;0.5;0"
+                    keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+                    dur="2s"
+                    repeatCount="indefinite" />
+            </path>
+        </mask>
+    </defs>
+
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient0)" mask="url(#maskGradient)"/>
+</svg>

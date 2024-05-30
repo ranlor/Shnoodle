@@ -1,0 +1,81 @@
+/*** media list menu section ***/
+
+.present-list-view
+{
+    padding: 20px;
+    padding-top: 70px;
+    column-count: 4;
+    column-gap: 25px;
+    font-size: 16pt;
+    position: relative;
+}
+
+.present-list-view .mediaBox
+{
+    padding: 7px;
+    border-radius: 5px;
+    display: inline-block;
+    width:100%;
+}
+
+.present-list-view .mediaBox:hover
+{
+    background-color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    text-shadow: 2px 0px 2px #000;
+    /* box-shadow: 0 0 10px rgba(255,255,255,0.4); */
+}
+
+.present-list-view .metaBox
+{
+    font-size: 12pt;
+    margin-left: 10px;
+    padding: 3PX;
+    border: solid 1px var(--text-color);
+    border-radius: 5PX;
+}
+
+.present-list-view .metaBoxShow
+{
+    background-color: var(--gradient-clr2-50);
+}
+
+.present-list-view .metaBoxMovie
+{
+    background-color: var(--gradient-clr3-50);
+}
+
+.present-list-view .hide-search-result
+{
+    display: none;
+}
+
+.search-box
+{
+    position: absolute;
+    top: 10px;
+    font-size: 19pt;
+    width: 40%;
+    min-width: 200px;
+    left: 30%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 4px var(--gradient-clr1) solid;
+    color: var(--text-color);
+    padding: 10px;
+    padding-bottom: 0;
+    transition: 0.4s;
+    font-family: 'web-font-ui';
+    text-transform: uppercase;
+}
+
+.search-box:hover,
+.search-box:focus,
+.search-box:active,
+.search-box:focus-visible
+{
+    border: 0;
+    background-color: rgba(255,255,255,0.2);
+    border-bottom: 4px var(--gradient-clr1) solid;
+    outline: none;
+}

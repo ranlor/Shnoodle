@@ -1,0 +1,185 @@
+/*** animations ***/
+
+@keyframes fade-in {
+    from { opacity: 0;}
+    to {opacity: 1.0;}
+}
+
+@keyframes scale-out {
+    from { transform: scale(1);}
+    to { transform: scale(1.3);}
+}
+
+@keyframes scale-loop {
+    from , to { transform: scale(1.0); }
+    50% { transform: scale(1.4); }
+}
+
+@keyframes pan-loop {
+    from , to { transform: translateY(0%); }
+    50% { transform: translateY(-5%); }
+}
+
+@keyframes rotate-loop {
+    from , to { transform: rotate(10deg) scale(1.5);}
+    50% { transform: rotate(-10deg) scale(1.5);}
+}
+
+@keyframes poster-play {
+    from, to{
+        transform: scale(1.12) translate(3%,-1%) skew(var(--skewDeg));
+    }
+    40%
+    {
+        transform: scale(1.1) translate(-56%, -10%) skew(var(--skewDeg));
+    }
+    50%
+    {
+        transform: scale(1.15) translate(-53%,-3%) skew(var(--skewDeg));
+    }
+    85%
+    {
+        transform: scale(1.1) translate(-2%,-12%) skew(var(--skewDeg));
+    }
+}
+
+@keyframes poster-up-down {
+    from, to{
+        transform: scale(1.1) translate(3%,3%) skew(var(--skewDeg));
+    }
+    15%
+    {
+        transform: scale(1.1) translate(-10%,-19%) skew(var(--skewDeg));
+    }
+    30%
+    {
+        transform: scale(1.1) translate(-25%,7%) skew(var(--skewDeg));
+    }
+    45%
+    {
+        transform: scale(1.1) translate(-32%,-20%) skew(var(--skewDeg));
+    }
+    60%
+    {
+        transform: scale(1.1) translate(-54%,4%) skew(var(--skewDeg));
+    }
+    75%
+    {
+        transform: scale(1.1) translate(-68%,-18%) skew(var(--skewDeg));
+    }
+}
+
+@keyframes poster-tri {
+    from, to{
+        transform: scale(1.1) translate(-1%,-19%) skew(var(--skewDeg));
+    }
+    33%
+    {
+        transform: scale(1.1) translate(-25%,8%) skew(var(--skewDeg));
+    }
+    66%
+    {
+        transform: scale(1.1) translate(-57%,-19%) skew(var(--skewDeg));
+    }
+}
+
+@keyframes poster-hover {
+    from, to{
+        transform: scale(1.0) translate(-25%,4%) skew(var(--skewDeg));
+    }
+    50%
+    {
+        transform: scale(1.0) translate(-25%,-19%) skew(var(--skewDeg));
+    }
+}
+
+@keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+}
+
+
+@keyframes gelatine2 {
+    0%,100%
+    {
+        transform: scale3d(1,1,1)
+    }
+    30%
+    {
+        transform: scale3d(1.65,.75,1)
+    }
+    40%
+    {
+        transform: scale3d(.95,1.25,1)
+    }
+    50%
+    {
+        transform: scale3d(1.55,.85,1)
+    }
+    65%
+    {
+        transform: scale3d(.95,1.05,1)
+    }
+    70%
+    {
+        transform: scale3d(1.05,.95,1)
+    }
+    90%
+    {
+        transform: scale3d(1,1,1)
+    }
+}
+
+@keyframes logo-dance {
+    0%, 7% {
+      transform: rotateZ(0);
+      left:-10%;
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+        transform: rotateZ(6deg);
+    }
+    35% {
+    transform: rotateZ(-4deg);
+    }
+    40% {
+        transform: rotateZ(0);
+    }
+    45% {
+        left:90%;
+    }
+    55% {
+        transform: rotateZ(-15deg);
+    }
+    60% {
+        transform: rotateZ(10deg);
+    }
+    65% {
+    transform: rotateZ(-10deg);
+    }
+    70% {
+        transform: rotateZ(6deg);
+    }
+    75% {
+    transform: rotateZ(-4deg);
+    }
+    80% {
+      transform: rotateZ(0);
+      left:calc(50% - 64px);
+    }
+    100%
+    {
+        left:calc(50% - 64px);
+        transform: rotateZ(360deg);
+    }
+  }

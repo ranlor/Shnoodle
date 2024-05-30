@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/view_menu.css" />
+        <link rel="stylesheet" href="/css/list_view.css" />
+        <link rel="stylesheet" href="/css/fs_view.css" />
+        <link rel="stylesheet" href="/css/poster_view.css" />
+        <link rel="stylesheet" href="/css/media.css" />
+        <link rel="stylesheet" href="/css/video.css" />
+        <link rel="stylesheet" href="/css/animations.css" />
+        <link rel="stylesheet" href="/css/switchbox.css" />
+        <script defer src="js/hls.js"></script>
+        <script defer src="js/app.js" charset="utf-8" type="module"></script>
+    </head>
+    <body>
+        <header id="pageHeader">
+            <div class="gradientHead"></div>
+            <div class="logo">
+                <img class="logoShape" src="/res/logo.svg"/>
+                <img class="logoText" src="/res/shnoodle.svg"/>
+            </div>
+        </header>
+        <section id="mediaList" class="hiddenBlock">
+            <menu class="mediaMenu">
+                <li><a href="#list-view" class="selected" data-action="listview">list</a></li>
+                <li><a href="#poster-view" data-action="posterview" >poster</a></li>
+                <li><a href="#files-view" data-action="filesview" >files</a></li>
+            </menu>
+            <div id="mediaListCanvas">
+            </div>
+        </section>
+        <section id="mediaSection" class="hiddenBlock section">
+            <button id="mediaSectionClose" class="closeButton">back to library</button>
+            <button id="playButton" class="playButton">play</button>
+        </section>
+        <section id="videoPlayerSection" class="hiddenBlock section">
+            <button id="videoPlayerSectionClose" class="closeButton" >back to media page</button>
+            <div class="extenderContainer clipboard"><div id="copyStreamLink"></div></div>
+            <a href="javascript:void(0)" target="about:blank" class="download" id="download">download</a>
+            <div id="videoWrapper" class="wrapper">
+                <h4 class="videoTitle" id="videoTitle"></h4>
+                <video id="videoPlayer"></video>
+            </div>
+        </section> 
+        <script>
+            window.shnoodleConfig = <%py config py%>; 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+/*** checkbox ***/
+
+.switch 
+{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    padding:0 !important;
+}
+
+.switch input 
+{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch span
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    border: 1px rgba(255,255,255,0.3) solid;
+    transition: .4s;
+}
+
+.switch span:before 
+{
+    position: absolute;
+    content: "NO";
+    font-size: 11px;
+    line-height: 26px;
+    text-align: center;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    transition: all .4s;
+    display: block;
+}
+
+.switch input:checked + span 
+{
+    background-color:  var(--gradient-clr3);
+}
+
+.switch input:checked+ span:before 
+{
+    content: "YES";
+}
+
+.switch  input:checked + span:before 
+{
+    transform: translateX(44px);
+}
