@@ -1,0 +1,10 @@
+{ 
+    "blacklist" : [ "720p" , "x265" , "x264" , "1080p" ,  "WEBRip" , "WEB" , "YTS" , "MiNX" , "BluRay" , "2160p" , "4K",
+        "HEVC" , "MX" ,  "AAC5" , "AAC" , "GalaxyTV" , "10bit" , "PSA" , "ENG" , "DUAL" , "AUDIO" , "JPN" , "2CH" , 
+        "NF" , "H264" , "MeGusta" , "eztv" , "6CH" , "YIFY" , "DL" , "HMAX" ,  "BrRip", "Rip" , "DUBBED" , "t3nzin" , "AAC" , "ATVP" , 
+        "English" , "DD5" , "MSubs" , "TsS" , "XLF" , "HULU" , "MeGusta" , "LT" , "AG" , "DSNP" , "DDP5" , "BrRip" , "AMZN" , "Vyndros",
+        "WEBrip" , "D0ct0rLew" , "GGEZ" , "GGWP" , "T0PAZ" , "XLF" , "web" , "h264" , "xlf" , " ZMNT" , "ELiTE" , "ZMNT" , "iNTERNAL" ,
+        "GLHF" , "264" , "NTb" , "x70qg5r" , "Worldmkv" , "Ita" , "Eng" , "Spa" , "h265" , "SubS" , "Me7alh" , "MaruAMZN" , "REPACK", "~", "BRrip", "GAZ"]
+    ,
+    "compound_blacklist" : [ "DDP5.1", "H.264" , "AAC5.1" , "7-Rip", "DD5.1"] 
+}
