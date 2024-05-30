@@ -1,0 +1,11 @@
+{
+    "names" : {
+        "*ShowName*":"Pretty Show Name",
+        "showname":"Pretty Show Name",
+        "*Some Movie (2023)*":"Some Movie"
+    },
+
+    "thumbnails" : {
+        "Pretty Show Name":"00:02:05"
+    }
+}
