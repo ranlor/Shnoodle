@@ -1,0 +1,23 @@
+{
+    "port":8000,
+    "mediaPaths": [],
+    "allowedMediaExt": ["mkv","mp4"],
+    "allowedSubtitleExt": ["srt"],
+    "blacklist" : "blacklist.json",
+    "root_path": "frontend",
+    "resource_path" : "localFiles",
+    "404File" : "404.html",
+    "defaultFile" : "index.htmlpy",
+    "ffmpeg" : "ffmpeg",
+    "ffprobe": "ffprobe",
+    "thumbWidth" : 640,
+    "thumbQuality" : 90,
+    "transcodingTimeoutInSeconds" : 30,
+    "enableGPUEncoding" : false,
+    "subtitlesDelay" : 0,
+    "gpu" : "none",
+    "initialView" : "listview",
+    "telemetry" : true,
+    "telemetryIntervalSec" : 5,
+    "telemetryTempValues" : {}
+}
